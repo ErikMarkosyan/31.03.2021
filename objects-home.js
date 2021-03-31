@@ -33,7 +33,7 @@ let carMercedes = {
   engine: "V8",
   hp: "435 Horse Powers",
 };
-// console.log("<=>", carMercedes);
+//console.log("<=>", carMercedes);
 
 // ստուգումը թե արդյոք կա key value օբյեկտի մեջ անում ենք հետեւյալ ձեւով
 
