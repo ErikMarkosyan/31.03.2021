@@ -114,3 +114,29 @@ const car = {
 
 // 4․ someFunction.bind(object) սրանով քոփի ենք էդ նույն ֆունկցիան, որի this-ը լինում ա մեր տված օբյեկտը 
   
+function say() {
+  console.log(this.name);
+}
+
+say(); // լոգ կանի գլոբալ դիսը
+
+let user = { name: "John" };
+
+say.call( user ); // ասում ենք, էս ֆունկցիայի դիսը ըլնի
+// user-ը
+// say.apply-ը անում ա նույն խեռը ինչ call-ը
+// ստրանք կանչում են ֆունկցիան ուրիշ դիսով
+
+let q = say.bind(user); // bind-ը ստեղծում ա նոր ֆունկցիա, որի this-ը արդեն ուրիշ ա, մեր դեպքում երեւի q-ն ա
+q(); //
+
+function g() {
+  console.log(this);
+}
+
+let user2 = {
+	g: q.bind(null)
+};
+
+user2.g();
+

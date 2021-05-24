@@ -47,18 +47,18 @@ x: 1,
 y: 2,
 };
 
-function change(x,y) {
-for (let key in x) {
-  x[key] = y[key]; // սրանով կլոն եմ անում 
-  delete y[key]; 
-}
-return {obj1:x,obj2:y}      // րեթուռնի կողքը միշտ մի բան պիտի լինի գրած, եթե էս {obj1:x,obj2:y}-ը լիներ տակը, կլիներ շատ վատ 
-};
+function replacer(x,y){
+  for (let key in y){
+  x[key] = y[key]; // ստեղ կլոն ենք անում
+  delete y[key]; // ստեղ ջնջում օբջ2-ի վալյուները
+  }
+  return x // րեթուռնի կողքը միշտ մի բան պիտի լինի գրած, եթե էս {obj1:x,obj2:y}-ը լիներ տակը, կլիներ շատ վատ 
 
+  };      
 console.log(change(obj1,obj2));
-// for (let key in obj2) {
-//  // սրանով ջնջում քիերը
-// };
+
+
+
 
 // console.log(obj2);
 // console.log(obj1);
@@ -87,8 +87,7 @@ function replace(x1){
       someValue = x1[key]; // դրան տալիս ենք օբյեկտի վելյուն  
       prevKey = key // իսկ ստեղ օբյեկտի քին 
     } else {
-      x1[prevKey] = x1[key] // ստեղ օբյեկտի նախորդ քին ենք տալիս ցիկլի մեջի 
-      
+      x1[prevKey] = x1[key] // ստեղ օբյեկտի նախորդ քին ենք տալիս ցիկլի մեջի
       x1[key] = someValue // ստեղ վակյույին տալիս ենք վալյուն 
     }
     }

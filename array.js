@@ -1,9 +1,9 @@
 
 
-function info(firstName,lastName){ // info հայտարարըմ ենք funcion declaration տալիս ենք 2առգումենտ 
-	// return firstName + "-" + lastName
-  return `${firstName}-${lastName}` // վերադարձնում ենք առգումենտների գումարը (concat)
-} 
+//function info(firstName,lastName){ // info հայտարարըմ ենք funcion declaration տալիս ենք 2առգումենտ 
+	// return firstName + "-" + lastName // վերադարձնում ենք առգումենտների գումարը (concat)
+  // return `${firstName}-${lastName}` // վերադարձնում ենք առգումենտների գումարը (concat)
+//} 
 
 // console.log(info('John', 'Wick')); // կանչում ենք ֆունկցիան տալով առգումենտներ 
 
